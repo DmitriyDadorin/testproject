@@ -1,0 +1,112 @@
+html {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",
+  Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
+}
+.wrapper{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* Поиск по таблице */
+.form{
+  float: right;
+  margin-bottom: 5px;
+  color: rgba(0, 0, 0, 0.7);  
+  font-weight: 500;
+}
+/* Таблица */
+.table{  
+    width: 100%; 
+    border-bottom: 2px double rgba(0, 0, 0, 0.7); 
+    border-collapse: collapse;  
+}
+
+.th {
+  border-bottom: 2px double hsla(0, 0%, 0%, 0.7);
+  text-align: left;
+  padding-left: 25px;
+  padding: 10px;
+  }
+
+  /* Стрелки указатели */
+.th::after{
+content: "";
+border: 5px solid transparent;
+border-top-color: rgb(221,221,221);  
+border-bottom: 0;
+display: block;
+height: 0;
+width: 0;
+float: right;
+clear: both;
+
+}
+
+.th::before{
+content: "";
+border: 5px solid transparent;
+border-bottom-color: rgb(221,221,221);  
+border-top: 0;
+display: block;
+height: 0;
+width: 0;
+float: right;
+margin-bottom: 2px;
+margin-top: 5px;
+}
+
+
+ td {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);  
+  font-weight: 500;
+  padding: 10px;
+  border-top: 2px solid rgb(235,235,235); 
+  border-bottom: 2px solid rgb(235,235,235); 
+}
+
+/* Блок пагинации */
+.pagination-block{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  float: right;
+  padding-right: 20px;
+  margin-top: 15px;
+}
+
+.previous, .next{
+font-size: 16px;
+color: rgba(0, 0, 0, 0.7);  
+font-weight: 500;
+}
+
+.pagination{
+  display: flex;
+  list-style-type: none;
+  float: right;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.pagination li{
+margin: 4px; 
+padding: 5px 13px 5px 13px;
+font-size: 16px;
+color: rgba(0, 0, 0, 0.7);  
+font-weight: 500;
+}
+
+/* Оформление чисел пагинации при клике */
+.pagination-select{
+padding: 0;margin: 0;
+border: 2px solid silver;
+border-radius: 3px;  
+background: linear-gradient(to bottom, #fafafa 0%,#fafafa 27%,#e2e2e2 64%,#e2e2e2 100%);
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
