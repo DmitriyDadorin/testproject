@@ -60,9 +60,9 @@
                 
                 function sort(a, b) {        
                     if (a.name > b.name) { 
-                        return -1; } 
+                        return 1; } 
                     if (a.name < b.name) { 
-                        return 1;  }               
+                        return -1;  }               
                         else
                     return 0;                
             };
@@ -96,9 +96,9 @@
             
             function sort(a, b) {        
                 if (a.position > b.position) { 
-                    return -1; } 
+                    return 1; } 
                 if (a.position < b.position) { 
-                    return 1;  }               
+                    return -1;  }               
                     else
                 return 0;                
         };
@@ -118,6 +118,44 @@
     };
 
     document.querySelector('.position').addEventListener('click', positionSort);
+
+
+
+    function officeSort(){ 
+
+        let tableRes = document.querySelectorAll('tr');
+        
+            for(let i = 1; i < tableRes.length; i++) {
+        
+                tableRes[i].remove();
+        
+            };        
+        
+        function sort(a, b) {        
+            if (a.office > b.office) { 
+                return 1; } 
+            if (a.office < b.office) { 
+                return -1;  }               
+                else
+            return 0;                
+    };
+    
+    dataArray.sort(sort);
+    
+    let table = '';   
+    
+    dataArray.map(man => {
+        table += drawTable(man);
+        
+    });       
+    
+    const element = document.querySelector('.table tbody');
+    element.insertAdjacentHTML('beforeend', table);    
+            
+};
+
+document.querySelector('.office').addEventListener('click', officeSort);
+
 
 
         const tool = document.querySelector('.name');
