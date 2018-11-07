@@ -41,8 +41,18 @@ height: 0;
 width: 0;
 float: right;
 clear: both;
-
 }
+.tool.th::after{
+  content: "";
+  border: 5px solid transparent;
+  border-top-color: rgb(20, 61, 150);  
+  border-bottom: 0;
+  display: block;
+  height: 0;
+  width: 0;
+  float: right;
+  clear: both;
+  }
 
 .th::before{
 content: "";
@@ -56,6 +66,19 @@ float: right;
 margin-bottom: 2px;
 margin-top: 5px;
 }
+.tools.th::before{
+  content: "";
+  border: 5px solid transparent;
+  border-bottom-color: rgb(20, 61, 150);  
+  border-top: 0;
+  display: block;
+  height: 0;
+  width: 0;
+  float: right;
+  margin-bottom: 2px;
+  margin-top: 5px;
+  }
+
 
 
  td {
@@ -109,4 +132,8 @@ background: linear-gradient(to bottom, #fafafa 0%,#fafafa 27%,#e2e2e2 64%,#e2e2e
 
 tr:nth-child(even) {
   background: #f9f9f9;
+}
+
+.th{
+  cursor: pointer;
 }
